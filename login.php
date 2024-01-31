@@ -7,7 +7,7 @@ if(isset($_SESSION['login'])){
 }
 require "function.php";
 if(isset($_POST['login'])){
-    $login = login($_POST);
+    login($_POST);
 }
 ?>
 

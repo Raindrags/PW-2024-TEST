@@ -62,14 +62,13 @@ function cari($key){
         $username = htmlspecialchars($_POST['username']);
         $password = htmlspecialchars($_POST['password']);
 
-        if($user = query("SELECT *FROM user WHERE username = '$username'")){
+        if($user = query("SELECT *FROM user WHERE username = '$username'")[0]){
             if(!password_verify($password,$user['password'])){
                 return [
                     'error:'=>true,
                     'pesan' =>'username / password salah'
                 ];
-            }
-            
+            }  
             $_SESSION['login'] = true;
             header("location:siswa.php");
     }

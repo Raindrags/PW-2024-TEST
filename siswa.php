@@ -27,10 +27,11 @@
     <a href="tambah.php">Tambah Data Siswa</a>
     <br>
     <form method = "post"action = "">
-        <input type="text" name="key" id="key" placeholder="masukan keyword yang akan dicari...." autocomplete="off" autofocus size="40">
-        <button type="submit" name="cari">Cari</button>
+        <input type="text" name="key" id="key" class="keyword" placeholder="masukan keyword yang akan dicari...." autocomplete="off" autofocus size="40">
+        <button type="submit" name="cari" class="tombol-cari">Cari</button>
 
     </form>
+    <div class="container">
     <table border="1" cellpadding="10" cellspacing ="0">
         <tr>
             <th>#</th>
@@ -54,5 +55,9 @@
         </tr>
         <?php endif; ?>
     </table>
+    </div>
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>
