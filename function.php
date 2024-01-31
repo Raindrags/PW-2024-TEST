@@ -13,9 +13,9 @@ function query($query){
 
 function tambah($data){
     global $conn;
-    $nama = $data['Nama'];
-    $kelas= $data['Kelas'];
-    $foto = $data['foto'];
+    $nama =htmlspecialchars($data['Nama']) ;
+    $kelas= htmlspecialchars($data['Kelas']);
+    $foto = htmlspecialchars($data['foto']);
 
     $query = (
                   "INSERT INTO datasiswa 
@@ -34,9 +34,9 @@ function hapus($id){
 function ubah($data){
     global $conn;
     $id = $data['id'];
-    $nama = $data['Nama'];
-    $kelas= $data['Kelas'];
-    $foto = $data['foto'];
+    $nama =htmlspecialchars($data['Nama']) ;
+    $kelas= htmlspecialchars($data['Kelas']);
+    $foto = htmlspecialchars($data['foto']);
     
     $query = "UPDATE datasiswa SET nama_siswa = '$nama',kelas = '$kelas',foto = '$foto' WHERE idsiswa =$id ";
     mysqli_query($conn,$query);
