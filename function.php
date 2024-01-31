@@ -31,5 +31,15 @@ function hapus($id){
 
     return mysqli_affected_rows($conn);
 }
-
+function ubah($data){
+    global $conn;
+    $id = $data['id'];
+    $nama = $data['Nama'];
+    $kelas= $data['Kelas'];
+    $foto = $data['foto'];
+    
+    $query = "UPDATE datasiswa SET nama_siswa = '$nama',kelas = '$kelas',foto = '$foto' WHERE idsiswa =$id ";
+    mysqli_query($conn,$query);
+    return mysqli_affected_rows($conn);
+}
 ?>

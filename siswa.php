@@ -29,7 +29,7 @@
             <td><?= $row['nama_siswa']; ?></td>
             <td><?= $row['kelas']; ?></td>
             <td><img src="img/<?= $row['foto']; ?>" width="60px" alt=""></td> 
-            <td><a href="">Update</a>|<a href="hapus.php?id=<?= $row["idsiswa"]; ?>"onclick="return confirm('yakin?');">Delete</a></td>   
+            <td><a href="ubah.php?id=<?= $row['idsiswa']; ?>" >Update</a>|<a href="hapus.php?id=<?= $row["idsiswa"]; ?>"onclick="return confirm('yakin?');">Delete</a></td>   
         </tr>
         <?php endforeach; ?>
     </table>
